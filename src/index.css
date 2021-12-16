@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #d4cfcf;
+    background: url("https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg");
 }
 
 code {
