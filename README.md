@@ -33,10 +33,10 @@ The app should now be running on [http://localhost:3000](http://localhost:3000).
 In order to use the OpenWeather API, you'll need to sign up for a free API key at [https://openweathermap.org/api](https://openweathermap.org/api). Once you have your key, create a file in the root directory of the project called `.env` and add the following line:
 
 
-Make sure to replace `YOUR_API_KEY_HERE` with your actual API key.
+Make sure to replace `apiKey` with your actual API key and import it in weather.js file.
 
 ```
-REACT_APP_WEATHER_API_KEY=YOUR_API_KEY_HERE
+apiKey=YOUR_API_KEY_HERE
 ```
 ## Built With 🛠️
 
