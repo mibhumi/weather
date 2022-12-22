@@ -47,3 +47,5 @@ apiKey=YOUR_API_KEY_HERE
 ## Contributing 🤝
 
 If you'd like to contribute to the project, please fork the repository and make your changes in a separate branch. Once you're ready to submit your changes, open a pull request and I'll review your code.
+
+Open [https://react-firebase-demo-c3011.web.app/](https://react-firebase-demo-c3011.web.app/) to view it in your browser.
