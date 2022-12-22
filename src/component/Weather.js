@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../App.css";
 import axios from "axios";
 import {apiKey} from "../api";
-
+import moment from "moment";
 
 const Weather = () => {  
     const [inputCity, setInputCity] = useState("")
@@ -21,7 +21,6 @@ const Weather = () => {
     }
   
     const handleChangeInput = (e) => {
-      console.log("value", e.target.value)
       setInputCity(e.target.value)
     }
   
@@ -47,15 +46,21 @@ const Weather = () => {
   
         {Object.keys(data).length > 0 &&
           <div className="col-md-12 text-center mt-5">
-  
             <div className="shadow rounded wetherResultBox">
-              <img className="weathorIcon"
-                src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" />
-  
               <h5 className="weathorCity">
                 {data?.name}
               </h5>
               <h6 className="weathorTemp">{((data?.main?.temp) - 273.15).toFixed(2)}°C</h6>
+              <h6 className="weathorTemp">
+                      { data?.main?.humidity}
+              </h6>
+              <h6 className="weathorTemp">
+                      { moment.utc(data?.sys?.sunrise,'X').add(data?.timezone,'seconds').format('HH:mm a')}
+              </h6>
+              <h6 className="weathorTemp">
+                      { moment.utc(data?.sys?.sunset,'X').add(data?.timezone,'seconds').format('HH:mm a')}
+              </h6>
+              <img src={`http://openweathermap.org/img/wn/${data?.weather[0].icon}@2x.png`}/>
             </div>
           </div>
         }

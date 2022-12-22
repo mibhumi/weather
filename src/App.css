@@ -1,10 +1,10 @@
 .container {
   max-width: 1080px;
   margin: 20px auto;
+  /* background: url("https://www.accuweather.com/images/hero/4/1440x450.jpg"); */
 }
 
 .wetherBg{
-  background: url("https://www.accuweather.com/images/hero/4/1440x450.jpg");
   height: 50vh;
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@
 .wetherResultBox{
   margin: auto;
   width: 500px;
-  height: 300px;
+  height: auto;
 }
 .weathorIcon{
   margin-top: 2rem;
